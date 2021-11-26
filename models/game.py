@@ -12,12 +12,12 @@ class Game:
         winner = ""
 
         if choices[0] == choices[1]:
-            return "The game is a draw!"
+            winner = None
         elif "rock" in choices and "scissors" in choices:
             winner = players[choices.index("rock")].name
         elif "scissors" in choices and "paper" in choices:
             winner = players[choices.index("scissors")].name
         elif "paper" in choices and "rock" in choices:
             winner = players[choices.index("paper")].name
-        return f"The winner is {winner}!"
+        return winner
 
