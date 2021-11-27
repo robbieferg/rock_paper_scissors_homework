@@ -1,3 +1,6 @@
+import random
+from player import Player
+
 class Game:
     
     def play_game(self, player_1, player_2):
@@ -19,5 +22,8 @@ class Game:
             winner = players[choices.index("paper")].name
         return winner
 
-    def play_computer(self):
-        human_player = Player()
+    def generate_computer_player(self):
+        choice_list = ["rock", "paper", "scissors"]
+        computer_player = Player("The Computer", random.choice(choice_list))
+
+        return computer_player
