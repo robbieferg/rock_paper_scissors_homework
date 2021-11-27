@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Play against the Computer</h1>
+<p>Enter your name and make your choice below to find out if you can beat our state-of-the-art Rock, Paper, Scissors computer.</p>
+<form action="/play" method = "post">
+    <label for="name">Your Name: </label>
+    <input type="text" name="name" id="name">
+    <label for="choice">Your Choice: </label>
+    <select name="choice" id="choice">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+    <input type="submit" value="Let's Play!">
+</form>
+{% endblock content %}

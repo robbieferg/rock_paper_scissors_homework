@@ -1,14 +1,12 @@
-<html>
-    <head>
-        <title>{{ title }}</title>
-    </head>
-    <body>
+{% extends "base.html" %}
+
+{% block content %}
         <h1>Game Result:</h1>
         {% if winner: %}
-            <p> The winner is {{ winner }}</p>
+            <p> The winner is {{ winner }}!</p>
         {% else %}
             <p>The game was a draw!</p>
         {% endif %}
+    {% endblock content %}
         
-    </body>
-</html>
+    

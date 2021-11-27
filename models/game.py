@@ -1,10 +1,8 @@
 class Game:
-
-    def __init__(self, player_1, player_2):
+    
+    def play_game(self, player_1, player_2):
         self.player_1 = player_1
         self.player_2 = player_2 
-    
-    def play_game(self):
         players = [self.player_1, self.player_2]
         choices = []
         choices.append(self.player_1.choice)
@@ -21,3 +19,5 @@ class Game:
             winner = players[choices.index("paper")].name
         return winner
 
+    def play_computer(self):
+        human_player = Player()
