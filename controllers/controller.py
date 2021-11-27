@@ -16,14 +16,15 @@ def display_result(player_1_choice, player_2_choice):
     winner = game_1.play_game(player_1, player_2)
     return render_template("result.html", title = "Result", winner = winner)
 
-@app.route("/play/")
+@app.route("/play")
 def play():
     return render_template("play.html", title = "play")
 
 @app.route("/play", methods = ["POST"])
 def play_computer_result():
+    pass
     new_game = Game()
-    player_1 = Player(request.form["name"], request.form["choice"])
-    player_2 = new_game.generate_computer_player
-    winner = new_game.play_game(player_1, player_2)
-    return render_template("result.html", title = "Result", winner = winner)
+    new_player_1 = Player(request.form["name"], request.form["choice"])
+    new_player_2 = new_game.generate_computer_player
+    new_winner = new_game.play_game(new_player_1, new_player_2)
+    return render_template("result.html", title = "Result", winner = new_winner)
