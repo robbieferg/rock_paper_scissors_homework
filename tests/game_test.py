@@ -21,6 +21,7 @@ class TestGame(unittest.TestCase):
 
         expected = None
         actual = self.game_2.play_game(self.player_1, self.player_2)
+        self.assertEqual(expected, actual)
 
     def test_generate_computer_player(self):
         game = Game()
