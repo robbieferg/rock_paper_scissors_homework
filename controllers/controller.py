@@ -23,7 +23,7 @@ def play():
 @app.route("/play", methods = ["POST"])
 def play_computer_result():
     new_game = Game()
-    new_player_1 = Player(request.form["name"], request.form["choice"])
-    new_player_2 = new_game.generate_computer_player()
-    winner = new_game.play_game(new_player_1, new_player_2)
-    return render_template("result.html", title = "Result", winner = winner, player_1 = new_player_1, player_2 = new_player_2)
+    player_1 = Player(request.form["name"], request.form["choice"])
+    player_2 = new_game.generate_computer_player()
+    winner = new_game.play_game(player_1, player_2)
+    return render_template("result.html", title = "Result", winner = winner, player_1 = player_1, player_2 = player_2)
