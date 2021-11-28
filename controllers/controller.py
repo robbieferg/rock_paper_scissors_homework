@@ -16,7 +16,7 @@ def display_result(player_1_choice, player_2_choice):
     winner = game_1.play_game(player_1, player_2)
     return render_template("result.html", title = "Result", winner = winner, player_1 = player_1, player_2 = player_2)
 
-@app.route("/play/")
+@app.route("/play")
 def play():
     return render_template("play.html", title = "play")
 
