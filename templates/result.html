@@ -4,11 +4,13 @@
     <h1>Game Result:</h1>
     <p><b>{{ player_1.name }}</b> chose {{ player_1.choice }}.</p>
     <p><b>{{ player_2.name }}</b> chose {{ player_2.choice }}.</p>
+    <br>
     {% if winner: %}
         <p> The winner is <b>{{ winner.name }}!</b></p>
     {% else %}
         <p>The game was a draw!</p>
     {% endif %}
+    
 
     {% if winner.choice == "rock": %}
         <p>(Rock breaks Scissors!)</p>
