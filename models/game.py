@@ -1,5 +1,5 @@
 import random
-from player import Player
+from models.player import Player
 
 class Game:
     
@@ -15,11 +15,11 @@ class Game:
         if choices[0] == choices[1]:
             winner = None
         elif "rock" in choices and "scissors" in choices:
-            winner = players[choices.index("rock")].name
+            winner = players[choices.index("rock")]
         elif "scissors" in choices and "paper" in choices:
-            winner = players[choices.index("scissors")].name
+            winner = players[choices.index("scissors")]
         elif "paper" in choices and "rock" in choices:
-            winner = players[choices.index("paper")].name
+            winner = players[choices.index("paper")]
         return winner
 
     def generate_computer_player(self):
